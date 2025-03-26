@@ -7,7 +7,10 @@ const Theme = ({ children }) => {
 		<ConfigProvider
 			theme={{
 				token: {
-					colorPrimary: ''
+					colorPrimary: "hsl(var(--primary-500))",
+					colorBgBase: "hsl(var(--background))",
+					colorTextBase: "hsl(var(--foreground))",
+					fontFamily: 'var(--font-nunito)'
 				}
 			}}
 		>
