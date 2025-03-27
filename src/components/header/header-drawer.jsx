@@ -3,7 +3,7 @@
 import { Button, Drawer } from 'antd'
 import { Fragment, useState } from 'react';
 import { AnimatedBurgerMenu } from './animated-burger-menu';
-import { NavLinks } from '@/app/(initialize)/constants';
+import { NavLinks } from '@/config/navlinks';
 import Link from 'next/link';
 
 export const HeaderDrawer = () => {

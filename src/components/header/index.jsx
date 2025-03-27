@@ -1,4 +1,4 @@
-import { NavLinks } from '@/app/(initialize)/constants'
+import { NavLinks } from '@/config/navlinks'
 import { Dropdown, Space } from 'antd'
 import Image from 'next/image'
 import Link from 'next/link'
