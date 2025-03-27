@@ -2,9 +2,9 @@
 
 import { Button, Drawer } from 'antd'
 import { Fragment, useState } from 'react';
-import { AnimatedBurgerMenu } from './animated-burger-menu';
 import { NavLinks } from '@/config/navlinks';
 import Link from 'next/link';
+import BurgerMenu from '../burger-menu';
 
 export const HeaderDrawer = () => {
 	const [open, setOpen] = useState(false);
@@ -33,11 +33,9 @@ export const HeaderDrawer = () => {
 		)
 	}
 	return (
-		<div className='md:hidden'>
-			<Button type="text" onClick={showDrawer}>
-				<AnimatedBurgerMenu/>
-			</Button>
-			<Drawer title="CodeVera" onClose={onClose} open={open}>
+		<div className='flex w-fit h-fit md:hidden'>
+			<BurgerMenu/>
+			{/* <Drawer title="CodeVera" onClose={onClose} open={open}>
 				<ul className='w-full flex flex-col'>
 					{NavLinks.map((link, index)=> 
 						link?.children 
@@ -45,7 +43,7 @@ export const HeaderDrawer = () => {
 							: navListItem(link, index)
 					)}
 				</ul>
-			</Drawer>
+			</Drawer> */}
 		</div>
 	)
 }

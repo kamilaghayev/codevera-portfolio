@@ -1,10 +1,13 @@
 import { cls } from '@/shared/utils'
 
-export const AnimatedBurgerMenu = ({isOpen = false}) => {
+export const AnimatedMenuIcon = ({isOpen = false, setIsOpen}) => {
 	return (
-		<div className={cls(
-			"flex items-center justify-center bg-primary-500"
-		)}>
+		<button 
+			className={cls(
+				"flex items-center justify-center bg-primary-500 w-8 h-8 rounded-md cursor-pointer "
+			)}
+			onClick={() => setIsOpen(prev => !prev)}
+		>
 			<span 
 				aria-hidden="true" 
 				className={cls(
@@ -26,6 +29,6 @@ export const AnimatedBurgerMenu = ({isOpen = false}) => {
 					isOpen ? '-rotate-45': 'translate-y-1.5'
 				)}
 			/>
-		</div>
+		</button>
 	)
 }
