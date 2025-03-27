@@ -1,7 +1,7 @@
 'use client'
 
 import { Button, Drawer } from 'antd'
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { AnimatedBurgerMenu } from './animated-burger-menu';
 import { NavLinks } from '@/app/(initialize)/constants';
 import Link from 'next/link';
@@ -26,10 +26,10 @@ export const HeaderDrawer = () => {
 	)
 	const drawerDropdown = (link) => {
 		return (
-			<>
+			<Fragment key={`${link.label}-${link.href}`}>
 				{link?.isParentLink && navListItem(link, link.label)}
 				{link?.children && link.children?.map((subLink, idx) => navListItem(subLink, idx))}
-			</>
+			</Fragment>
 		)
 	}
 	return (
