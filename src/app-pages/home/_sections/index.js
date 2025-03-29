@@ -1,8 +1,8 @@
 
 import { Introduction } from './introduction';
-import { OurServices } from './our-services';
+import { AboutUs } from './about-us';
 
 export  {
 	Introduction,
-	OurServices
+	AboutUs
 }
