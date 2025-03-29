@@ -105,7 +105,8 @@ export const Header = () => {
 	}
 	return (
 		<header className='w-full min-h-16 flex-center sticky top-0 pt-2 z-[44]'>
-			<div className='mx-2.5 xs-3:mx-auto flex items-center gap-16 justify-between border px-5 h-full w-full xs-3:w-9/12 md:w-fit min-h-[52px] rounded-4xl border-gray-300 bg-gray-100'>
+			<div className='relative mx-2.5 xs-3:mx-auto flex items-center gap-16 justify-between px-5 h-full w-full xs-3:w-9/12 md:w-fit min-h-[52px] rounded-4xl bg-gray-400 '>
+				
 				<Link href={getUrls().home()}>
 					<Image src={'/logo.webp'} width={56} height={46} alt='CodeVera' />
 				</Link>
