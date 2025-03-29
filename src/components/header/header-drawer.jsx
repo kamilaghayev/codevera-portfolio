@@ -34,8 +34,7 @@ export const HeaderDrawer = () => {
 	}
 	return (
 		<div className='flex w-fit h-fit md:hidden'>
-			<BurgerMenu/>
-			{/* <Drawer title="CodeVera" onClose={onClose} open={open}>
+			<Drawer title="CodeVera" onClose={onClose} open={open}>
 				<ul className='w-full flex flex-col'>
 					{NavLinks.map((link, index)=> 
 						link?.children 
@@ -43,7 +42,7 @@ export const HeaderDrawer = () => {
 							: navListItem(link, index)
 					)}
 				</ul>
-			</Drawer> */}
+			</Drawer>
 		</div>
 	)
 }

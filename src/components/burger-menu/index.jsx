@@ -1,16 +1,31 @@
-import React, { useState } from 'react'
-import { AnimatePresence } from "motion/react"
+
+'use client'
+
+import { useEffect, useState } from 'react'
 import { AnimatedMenuIcon } from './animated-menu-icon'
 import { CurvedMenu } from './curved-menu'
+import { AnimatePresence } from 'framer-motion';
 const BurgerMenu = () => {
-	const [isOpen, setIsOpen] = useState(false)
+	const [isOpen, setIsOpen] = useState(false);
+
+	useEffect(() => {
+		if (isOpen) {
+			document.body.classList.add("no-scroll");
+		} else {
+			document.body.classList.remove("no-scroll");
+		}
+
+		return () => {
+			document.body.classList.remove("no-scroll");
+		};
+	}, [isOpen]);
 	return (
-		<>
+		<div className='md:hidden'>
 			<AnimatedMenuIcon isOpen={isOpen} setIsOpen={setIsOpen} />
 			<AnimatePresence mode="wait">
-				{isOpen && <CurvedMenu />}
+				{isOpen && <CurvedMenu key="curved-menu" setIsOpen={setIsOpen} />}
 			</AnimatePresence>
-		</>
+		</div>
 	)
 }
 
