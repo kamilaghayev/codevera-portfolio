@@ -9,8 +9,6 @@ export const ChangeTheme = ({size, variant}) => {
 	const changeTheme = () => {
 		setTheme(theme === 'dark' ? 'light' : 'dark');
 	}
-	console.log(theme);
-	
 	return (
 		<ChangeThemeSwitch isChecked={theme === 'dark'} onClick={changeTheme} size={size} variant={variant}/>
 	);

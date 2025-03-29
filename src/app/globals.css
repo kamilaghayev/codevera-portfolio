@@ -22,7 +22,7 @@ body {
 }
 
 .container-center {
-    @apply container mx-auto p-2.5 sm:p-0;
+    @apply max-sm:w-full sm:container mx-auto px-2.5 xs-2:px-4 sm:p-0;
 }
 
 .flex-center {

@@ -38,11 +38,14 @@ export const useThemeStore = (selector ) => {
 };
 
 const GetThemeOnUser = ({children}) => {
-	const setTheme = useThemeStore((state) => state.setTheme);
+	const {setTheme, theme} = useThemeStore((state) => state);
 	useEffect(() => {
 		const themeOnStorage = getThemeOnStorage();
 		setTheme(themeOnStorage);
 	}, []);
+	useEffect(() => {
+		document.documentElement.setAttribute('data-theme', theme);
+	}, [theme]);
 	return (
 		<>{children}</>
 	)

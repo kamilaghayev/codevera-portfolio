@@ -14,8 +14,6 @@ export const CurvedMenu = ({ setIsOpen }) => {
 
 	const pathname = useRouter();
 	const [selectedIndicator, setSelectedIndicator] = useState(pathname);
-	console.log('selectedIndicator', pathname);
-	
 	return (
 		<>
 			<motion.div

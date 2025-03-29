@@ -2,7 +2,7 @@ export const EN_DICTIONARY = {
 	"Pages": {
 		"home": "Home",
 		"portfolio": "Portfolio",
-		"contactUs": "Contact us",
+		"contactUs": "Contact",
 		"about":"About",
 	}
 }
