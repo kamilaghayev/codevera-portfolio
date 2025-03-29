@@ -1,34 +1,46 @@
 import { cls } from '@/shared/utils'
+import { cubicBezier } from './animation'
 
 export const AnimatedMenuIcon = ({isOpen = false, setIsOpen}) => {
+	const animationDuration = `duration-[550ms] delay-150 ease-[cubic-bezier(${cubicBezier.join(',')})]`
 	return (
-		<button 
-			className={cls(
-				"flex items-center justify-center bg-primary-500 w-8 h-8 rounded-md cursor-pointer "
-			)}
-			onClick={() => setIsOpen(prev => !prev)}
-		>
-			<span 
-				aria-hidden="true" 
+			<button 
+				onClick={() => setIsOpen(prev => !prev)} 
 				className={cls(
-					"block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out",
-					isOpen ? 'rotate-45': '-translate-y-1.5'
+					"flex items-center justify-center w-10 h-10 relative rounded-lg cursor-pointer z-[41] overflow-hidden"
 				)}
+			>
+				<span
+					className={cls(
+						'absolute inset-0 bg-primary-500 transition-all',
+						animationDuration,
+						isOpen ? 'w-full' : 'w-0'
+					)}
 				/>
-			<span 
-				aria-hidden="true" 
-				className={cls(
-					"block absolute  h-0.5 w-5 bg-current transform transition duration-500 ease-in-out", 
-					isOpen && 'opacity-0'
-				)}
-			/>
-			<span 
-				aria-hidden="true" 
-				className={cls(
-					"block absolute  h-0.5 w-5 bg-current transform transition duration-500 ease-in-out" ,
-					isOpen ? '-rotate-45': 'translate-y-1.5'
-				)}
-			/>
-		</button>
+				<span 
+					aria-hidden="true" 
+					className={cls(
+						"block absolute h-0.5 w-5 transform transition ease-in-out",
+						animationDuration,
+						isOpen ? 'rotate-45 bg-white': '-translate-y-1.5 bg-black'
+					)}
+					/>
+				<span 
+					aria-hidden="true" 
+					className={cls(
+						"block absolute  h-0.5 w-5 transform bg-black transition ease-in-out", 
+						animationDuration,
+						isOpen && 'opacity-0'
+					)}
+				/>
+				<span 
+					aria-hidden="true" 
+					className={cls(
+						"block absolute  h-0.5 w-5 transform transition ease-in-out" ,
+						animationDuration,
+						isOpen ? '-rotate-45 bg-white': 'translate-y-1.5 bg-black'
+					)}
+				/>
+			</button>
 	)
 }
