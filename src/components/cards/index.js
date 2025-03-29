@@ -1,6 +1,6 @@
 
-import { ServiceCard } from './service-card';
+import { AboutCard } from './about-card';
 
 export {
-	ServiceCard
+	AboutCard
 }
