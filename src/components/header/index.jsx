@@ -5,9 +5,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import BurgerMenu from '../burger-menu'
 import { ChangeTheme } from '@/features/change-theme'
-import { cls } from '@/shared/utils'
-import React from "react";
 import { motion } from "framer-motion";
+import { getUrls } from '@/config/url.config'
 
 
 
@@ -107,7 +106,9 @@ export const Header = () => {
 	return (
 		<header className='w-full min-h-16 flex-center sticky top-0 pt-2 z-[44]'>
 			<div className='mx-2.5 xs-3:mx-auto flex items-center gap-16 justify-between border px-5 h-full w-full xs-3:w-9/12 md:w-fit min-h-[52px] rounded-4xl border-gray-300 bg-gray-100'>
-				<Image src={'/logo.webp'} width={56} height={46} alt='CodeVera' />
+				<Link href={getUrls().home()}>
+					<Image src={'/logo.webp'} width={56} height={46} alt='CodeVera' />
+				</Link>
 
 				<nav className='hidden md:block'>
 					<ul className='flex gap-5'>

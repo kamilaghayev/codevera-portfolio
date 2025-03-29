@@ -20,7 +20,9 @@ body {
     text-decoration: none;
 	scroll-behavior: smooth;
 }
-
+html {
+	scroll-behavior: smooth;
+}
 .container-center {
     @apply max-sm:w-full sm:container mx-auto px-2.5 xs-2:px-4 sm:p-0;
 }
