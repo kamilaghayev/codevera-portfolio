@@ -1,3 +1,4 @@
+import { ThemeStoreProvider } from '@/features/change-theme/change-theme.provider';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 
 function composeProviders(providers) {
@@ -6,7 +7,7 @@ function composeProviders(providers) {
     };
 }
 
-const CombinedProviders = composeProviders([AntdRegistry]);
+const CombinedProviders = composeProviders([AntdRegistry, ThemeStoreProvider]);
 
 const Providers = ({ children }) => {
     return <CombinedProviders>{children}</CombinedProviders>;

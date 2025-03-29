@@ -1,25 +1,98 @@
+'use client'
 import { NavLinks } from '@/config/navlinks'
 import { Dropdown } from 'antd'
 import Image from 'next/image'
 import Link from 'next/link'
 import BurgerMenu from '../burger-menu'
 import { ChangeTheme } from '@/features/change-theme'
+import { cls } from '@/shared/utils'
+import React from "react";
+import { motion } from "framer-motion";
 
+
+
+const DURATION = 0.25;
+const STAGGER = 0.025;
+
+const FlipLink = ({ children }) => {
+	return (
+		<motion.span
+			initial="initial"
+			whileHover="hovered"
+			className="relative block overflow-hidden whitespace-nowrap"
+			style={{
+				lineHeight: .9,
+			}}
+		>
+			<div>
+				{children.split("").map((l, i) => (
+					<motion.span
+						variants={{
+							initial: {
+								y: 0,
+							},
+							hovered: {
+								y: "-100%",
+							},
+						}}
+						transition={{
+							duration: DURATION,
+							ease: "easeInOut",
+							delay: STAGGER * i,
+						}}
+						className="inline-block"
+						key={i}
+					>
+						{l}
+					</motion.span>
+				))}
+			</div>
+			<div className="absolute inset-0">
+				{children.split("").map((l, i) => (
+					<motion.span
+						variants={{
+							initial: {
+								y: "100%",
+							},
+							hovered: {
+								y: 0,
+							},
+						}}
+						transition={{
+							duration: DURATION,
+							ease: "easeInOut",
+							delay: STAGGER * i,
+						}}
+						className="inline-block"
+						key={i}
+					>
+						{l}
+					</motion.span>
+				))}
+			</div>
+		</motion.span>
+	);
+};
 export const Header = () => {
+	const navbarLink = (linkItem, index) => (
+		<Link href={linkItem?.href} className='h-full'>
+			<FlipLink href={linkItem?.href}>
+				{linkItem?.label}
+			</FlipLink>
+		</Link>
+	)
 	const navbarDropdown = (linkItem) => {
 		const items = linkItem.children?.map((link, idx) => {
-			const {label, href, ...linkProps} = link
+			const { label, href, ...linkProps } = link
 			return {
 				key: idx,
-				label: (
-					<Link href={href}>{label}</Link>
-				),
+				label: navbarLink(link),
 				...linkProps
 			}
 		})
 		return (
 			<Dropdown menu={{ items }}>
-				{linkItem?.isParentLink 
+				{linkItem?.isParentLink
 					? (
 						<Link href={linkItem?.href}>{linkItem?.label}</Link>
 					)
@@ -32,29 +105,30 @@ export const Header = () => {
 		)
 	}
 	return (
-		<header className='w-full min-h-16 flex-center sticky pt-2 z-[44]'>
-			<div className='w-fit mx-auto flex items-center gap-16 justify-between border px-4 py-2 min-h-[52px] rounded-lg border-gray-300 bg-gray-100'>
-				<Image src={'/logo.webp'} width={56} height={46} alt='CodeVera'/>
+		<header className='w-full min-h-16 flex-center sticky top-0 pt-2 z-[44]'>
+			<div className='mx-2.5 xs-3:mx-auto flex items-center gap-16 justify-between border px-5 h-full w-full xs-3:w-9/12 md:w-fit min-h-[52px] rounded-4xl border-gray-300 bg-gray-100'>
+				<Image src={'/logo.webp'} width={56} height={46} alt='CodeVera' />
 
 				<nav className='hidden md:block'>
 					<ul className='flex gap-5'>
 						{NavLinks.map((link, index) => (
-							<li 
+							<li
 								key={`${link?.href}-${index}`}
 								className='flex-center transition-all cursor-pointer py-2 rounded-full hover:text-primary-500'
 							>
-								{link?.children 
+								{link?.children
 									? navbarDropdown(link)
-									: <Link href={link?.href}>{link?.label}</Link>}
+									: navbarLink(link, index)}
 							</li>
 						))}
-						<li>
-							<ChangeTheme/>
-						</li>
 					</ul>
 				</nav>
 
-				<BurgerMenu/>
+				<div className='hidden md:block pt-[1px]'>
+					<ChangeTheme />
+				</div>
+
+				<BurgerMenu />
 			</div>
 		</header>
 	)
