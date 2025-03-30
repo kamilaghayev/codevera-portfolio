@@ -1,1 +1,6 @@
-export * from "./more-button";
+
+import { MoreButton } from "./more-button";
+
+export {
+    MoreButton,
+}
