@@ -27,10 +27,10 @@ export const AboutUs = () => {
 
 	return (
 		<section aria-labelledby='about-us'>
-			<div className='container-center flex flex-col lg:flex-row lg:justify-between gap-20 mt-36'>
-				<div className='flex flex-col items-center md:items-start gap-10 w-full lg:w-[40%] lg:max-w-[480px]'>
-					<h2 id='about-us' className='text-[56px] font-semibold'>About us</h2>
-					<p className='text-lg text-center md:text-left'>
+			<div className='container-center flex flex-col lg:flex-row lg:justify-between gap-10 sm:gap-14 lg:gap-20 mt-36'>
+				<div className='flex flex-col items-center md:items-start gap-6 sm:gap-8 lg:gap-10 w-full lg:w-[40%] lg:max-w-[480px]'>
+					<h2 id='about-us' className='text-3xl sm:text-4xl lg:text-6xl font-semibold'>About us</h2>
+					<p className='text-sm sm:text-base lg:text-lg text-center md:text-left'>
 						CodeVera as a team offers quality and reliable service with digital solutions, 
 						websites, ERP systems, mobile applications, email services, integration of payment 
 						systems and other services.
