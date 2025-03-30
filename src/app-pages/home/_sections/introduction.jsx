@@ -1,3 +1,5 @@
+import { Laptop3d } from '@/features/laptop-3d'
+
 export const Introduction = () => {
 	return (
 		<section id='home' aria-labelledby='introduction'>
@@ -15,8 +17,8 @@ export const Introduction = () => {
 					</div>
 					{/* 3d section */}
 					<div className='flex items-center justify-end pt-10 md:pt-0'>
-						<div className='w-full md:max-w-96 min-w-[300px] min-h-[300px] md:h-96 bg-red-200 aspect-square'>
-
+						<div className='w-full md:max-w-[500px] min-w-[300px] min-h-[300px] md:min-h-[500px] md:h-96 bg-red-200 aspect-square'>
+							<Laptop3d><h1>sdfsgdsfghdf</h1></Laptop3d>
 						</div>
 					</div>
 
