@@ -2,10 +2,12 @@ import { Introduction } from './introduction';
 import { AboutUs } from './about-us';
 import { Advantages } from './advantages';
 import { ContactUs } from './contact-us';
+import { OurProjects } from './our-projects';
 
 export  {
 	Introduction,
 	AboutUs,
 	Advantages,
-	ContactUs
+	ContactUs,
+	OurProjects
 }
