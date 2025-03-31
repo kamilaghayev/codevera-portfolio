@@ -2,7 +2,7 @@ import { Introduction, AboutUs, Advantages, ContactUs, OurProjects, Sponsors, Fa
 
 export const HomePage = () => {
 	return (
-		<>
+		<div className='flex flex-col gap-27 sm:gap-34 lg:gap-40'>
 			<Introduction/>
 			<AboutUs/>
 			<Advantages />
@@ -10,6 +10,6 @@ export const HomePage = () => {
 			<ContactUs />
 			<Sponsors />
 			<Faq />
-		</>
+		</div>
 	)
 } 
