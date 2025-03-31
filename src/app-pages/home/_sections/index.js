@@ -4,6 +4,7 @@ import { Advantages } from './advantages';
 import { ContactUs } from './contact-us';
 import { OurProjects } from './our-projects';
 import { Sponsors } from './sponsors';
+import { Faq } from './faq';
 
 export  {
 	Introduction,
@@ -12,4 +13,5 @@ export  {
 	ContactUs,
 	OurProjects,
 	Sponsors,
+	Faq,
 }
