@@ -4,7 +4,7 @@ export const ProjectCard = () => {
   return (
     <div className='w-full flex flex-col gap-4 sm:gap-6'>
         <div className='w-full aspect-video p-4 sm:p-5 lg:p-5 rounded-3xl bg-[#F5F5F5]'>
-            <div style={{backgroundImage: 'url(/project.png)'}} className='w-full h-full rounded-3xl bg-cover bg-center'></div>
+            <div style={{backgroundImage: 'url(/project.png)'}} className='w-full h-full rounded-3xl bg-cover'></div>
         </div>
         <div className='flex flex-col gap-2 sm:gap-4'>
             <h3 className='text-xl sm:text-3xl lg:text-4xl font-semibold'>CodeVera</h3>
