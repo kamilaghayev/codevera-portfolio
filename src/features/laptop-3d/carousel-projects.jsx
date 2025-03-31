@@ -2,6 +2,23 @@
 import { ProjectCard } from '@/components';
 import { useState, useEffect } from "react";
 
+// .content {
+//     width: 334px;
+//     height: 216px;
+//     background: #f0f0f0;
+//     border-radius: 3px;
+//     overflow: hidden;
+//     padding: 0;
+// }
+
+// .wrapper {
+//     padding:0px;
+//     width: 668px;
+//     height: 432px;
+//     transform: scale(0.5);
+//     transform-origin: top left;
+// }
+
 const images = [
 	"https://via.placeholder.com/800x400/FF5733/ffffff?text=Slide+1",
 	"https://via.placeholder.com/800x400/33FF57/ffffff?text=Slide+2",
@@ -20,16 +37,16 @@ export const CarouselProjects = () => {
 	}, []);
 
 	return (
-		<div className="relative w-full mx-auto overflow-hidden rounded-lg shadow-lg">
+		<div className="relative w-[334px] h-[216px] mx-auto overflow-hidden rounded-lg shadow-lg">
 			<div
 				className="flex transition-transform duration-700 ease-in-out"
 				style={{ transform: `translateX(-${currentIndex * 100}%)` }}
 			>
 				{images.map((src, index) => (
 					<div key={index} className='h-full w-[150px]'>
-						{/* <div className='w-full aspect-video p-2 rounded-3xl bg-[#F5F5F5]'>
+						<div className='w-full aspect-video p-2 rounded-3xl bg-[#F5F5F5]'>
 							<div style={{backgroundImage: 'url(/project.png)'}} className='w-full h-full rounded-3xl bg-cover'></div>
-						</div> */}
+						</div>
 						 <ProjectCard/>
 					</div>
 

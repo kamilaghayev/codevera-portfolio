@@ -30,7 +30,7 @@ export const Laptop3d = () => {
 				<Environment preset="city" />
 			</Suspense>
 			<ContactShadows position={[0, -3, 0]} scale={20} blur={4} far={4.5} />
-			<OrbitControls enablePan={false} enableZoom={true} minDistance={15} maxDistance={18} minPolarAngle={Math.PI / 2.2} maxPolarAngle={Math.PI / 2.2} />
+			<OrbitControls enablePan={false} enableZoom={true} minDistance={15} maxDistance={18} minPolarAngle={Math.PI / 2.4} maxPolarAngle={Math.PI / 2} />
 		</Canvas>
 	)
 }
