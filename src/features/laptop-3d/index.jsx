@@ -21,8 +21,8 @@ export const Laptop3d = () => {
 	return (
 		<Canvas camera={{ position: [5, 12, 15], fov: 55 }}>
 			<pointLight position={[10, 10, 10]} intensity={1.5} />
-			<axesHelper />
-			<gridHelper/>
+			{/* <axesHelper />
+			<gridHelper/> */}
 			<Suspense fallback={null}>
 				<group rotation={[0, 0, 0]} position={[0, 1, 0]}>
 					<MacBook />
