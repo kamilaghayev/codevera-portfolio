@@ -3,9 +3,11 @@ import { useFrame } from '@react-three/fiber'
 import { useRef } from 'react'
 import * as THREE from 'three'
 import { degToRad } from 'three/src/math/MathUtils'
+import { CarouselProjects } from './carousel-projects'
 export const MacBook = (props) =>  {
 	const group = useRef();
-	const notebookHead = useRef()
+	const notebookHead = useRef();
+
 	// Load model
 	const { nodes, materials } = useGLTF('/mac-book.glb');
 
@@ -35,9 +37,9 @@ export const MacBook = (props) =>  {
 					<mesh geometry={nodes['Cube008_2'].geometry}>
 
 						{/* Drei's HTML component can "hide behind" canvas geometry */}
-						<Html className="content" rotation-x={-Math.PI / 2} position={[0, 0.05, -0.09]} transform occlude>
-							<div className="wrapper" onPointerDown={(e) => e.stopPropagation()}>
-								<h1>Salam sdfghjfdsfgh</h1>
+						<Html className="content" rotation-x={-Math.PI / 2} transform occlude>
+							<div className='wrapper'>
+								<CarouselProjects/>
 							</div>
 						</Html>
 					</mesh>

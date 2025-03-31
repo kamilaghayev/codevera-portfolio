@@ -105,7 +105,7 @@ export const Header = () => {
 	}
 	return (
 		<header className='w-full min-h-16 flex-center sticky top-0 pt-2 z-[44]'>
-			<div className='relative mx-2.5 xs-3:mx-auto flex items-center gap-16 justify-between px-5 h-full w-full xs-3:w-9/12 md:w-fit min-h-[52px] rounded-4xl bg-gray-400 '>
+			<div className='relative mx-2.5 xs-3:mx-auto flex items-center gap-16 justify-between px-5 h-full w-full xs-3:w-9/12 md:w-fit min-h-[52px] rounded-4xl bg-[#F5F5F5] '>
 				
 				<Link href={getUrls().home()}>
 					<Image src={'/logo.png'} width={100} height={90} alt='CodeVera' />
@@ -126,9 +126,9 @@ export const Header = () => {
 					</ul>
 				</nav>
 
-				<div className='hidden md:block pt-[1px]'>
+				{/* <div className='hidden md:block pt-[1px]'>
 					<ChangeTheme />
-				</div>
+				</div> */}
 
 				<BurgerMenu />
 			</div>
