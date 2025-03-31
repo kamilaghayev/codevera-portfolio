@@ -1,4 +1,4 @@
-import { Introduction, AboutUs, Advantages, ContactUs } from './_sections'
+import { Introduction, AboutUs, Advantages, ContactUs, OurProjects } from './_sections'
 
 export const HomePage = () => {
 	return (
@@ -6,6 +6,7 @@ export const HomePage = () => {
 			<Introduction/>
 			<AboutUs/>
 			<Advantages />
+			<OurProjects />
 			<ContactUs />
 		</>
 	)
