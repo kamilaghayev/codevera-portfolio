@@ -1,6 +1,6 @@
 import { Geist, Nunito_Sans } from "next/font/google";
 import Providers from './(initialize)/providers';
-import { Header } from '@/components';
+import { Header, Footer } from '@/components';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -28,6 +28,7 @@ export default function RootLayout({ children }) {
         <Providers>
           <Header />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>

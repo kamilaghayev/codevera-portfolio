@@ -27,15 +27,17 @@ export const AboutUs = () => {
 
 	return (
 		<section id="about" aria-labelledby='about-us'>
-			<div className='container-center flex flex-col lg:flex-row lg:justify-between gap-10 sm:gap-14 lg:gap-20 pt-12 mt-24'>
-				<div className='flex flex-col items-center md:items-start gap-6 sm:gap-8 lg:gap-10 w-full lg:w-[40%] lg:max-w-[480px]'>
+			<div className='container-center flex flex-col lg:flex-row lg:justify-between gap-10 sm:gap-14 lg:gap-20'>
+				<div className='flex flex-col gap-6 sm:gap-8 lg:gap-10 w-full lg:w-[40%] lg:max-w-[480px]'>
 					<h2 id='about-us' className='text-3xl sm:text-4xl lg:text-6xl font-semibold'>About us</h2>
 					<p className='text-sm sm:text-base lg:text-lg text-center md:text-left'>
 						CodeVera as a team offers quality and reliable service with digital solutions, 
 						websites, ERP systems, mobile applications, email services, integration of payment 
 						systems and other services.
 					</p>
-					<MoreButton />
+					<div className="flex justify-center md:justify-start">
+					    <MoreButton />
+					</div>
 				</div>
 				<ul className="w-full lg:w-[60%] grid justify-items-center md:grid-cols-2 gap-6 lg:justify-items-end">
 					{aboutUsData?.map((item, index) => (

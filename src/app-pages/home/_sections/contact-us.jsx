@@ -5,7 +5,7 @@ import { ContactButton } from '@/components'
 export const ContactUs = () => {
   return (
     <section id='contact' aria-labelledby='contact-us'>
-        <div className='container-center flex flex-col gap-6 sm:gap-10 lg:gap-14 pt-12 mt-24 mb-36'>
+        <div className='container-center flex flex-col gap-6 sm:gap-10 lg:gap-14'>
             <h2 id='advantages' className='text-3xl sm:text-4xl lg:text-6xl font-semibold'>Contact us</h2>
             <div className='p-6 lg:p-10 bg-[#F5F5F5] rounded-3xl flex flex-col items-center sm:flex-row sm:items-stretch gap-5'>
                 <Image src='/envelop.webp' alt='envelop image' width={400} height={250} />
