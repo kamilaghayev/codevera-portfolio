@@ -3,11 +3,13 @@ import { AboutUs } from './about-us';
 import { Advantages } from './advantages';
 import { ContactUs } from './contact-us';
 import { OurProjects } from './our-projects';
+import { Sponsors } from './sponsors';
 
 export  {
 	Introduction,
 	AboutUs,
 	Advantages,
 	ContactUs,
-	OurProjects
+	OurProjects,
+	Sponsors,
 }

@@ -31,8 +31,8 @@ export const Advantages = () => {
     ]
 
   return (
-    <section aria-labelledby='advantages'>
-        <div className='container-center flex flex-col gap-6 sm:gap-10 lg:gap-14 mt-36 mb-36'>
+    <section id='advantages' aria-labelledby='advantages'>
+        <div className='container-center flex flex-col gap-6 sm:gap-10 lg:gap-14 pt-12 mt-24'>
             <h2 id='advantages' className='text-3xl sm:text-4xl lg:text-6xl font-semibold'>Advantages</h2>
             <div className='flex gap-5 overflow-x-scroll'>
                 {advantagesData?.map((item, index) => (

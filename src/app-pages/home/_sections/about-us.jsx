@@ -27,7 +27,7 @@ export const AboutUs = () => {
 
 	return (
 		<section id="about" aria-labelledby='about-us'>
-			<div className='container-center flex flex-col lg:flex-row lg:justify-between gap-10 sm:gap-14 lg:gap-20 mt-36'>
+			<div className='container-center flex flex-col lg:flex-row lg:justify-between gap-10 sm:gap-14 lg:gap-20 pt-12 mt-24'>
 				<div className='flex flex-col items-center md:items-start gap-6 sm:gap-8 lg:gap-10 w-full lg:w-[40%] lg:max-w-[480px]'>
 					<h2 id='about-us' className='text-3xl sm:text-4xl lg:text-6xl font-semibold'>About us</h2>
 					<p className='text-sm sm:text-base lg:text-lg text-center md:text-left'>
