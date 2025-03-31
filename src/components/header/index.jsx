@@ -108,7 +108,7 @@ export const Header = () => {
 			<div className='relative mx-2.5 xs-3:mx-auto flex items-center gap-16 justify-between px-5 h-full w-full xs-3:w-9/12 md:w-fit min-h-[52px] rounded-4xl bg-gray-400 '>
 				
 				<Link href={getUrls().home()}>
-					<Image src={'/logo.webp'} width={56} height={46} alt='CodeVera' />
+					<Image src={'/logo.png'} width={100} height={90} alt='CodeVera' />
 				</Link>
 
 				<nav className='hidden md:block'>

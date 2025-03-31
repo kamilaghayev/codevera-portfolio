@@ -33,7 +33,7 @@ const SponsorSwiper = () => {
           640: { slidesPerView: 4 },
           1024: { slidesPerView: 6 },
           1280: { slidesPerView: 8 },
-          1440: { slidesPerView: 9 },
+          1440: { slidesPerView: 6 },
         }}
         autoplay={{
           delay: 1000,
