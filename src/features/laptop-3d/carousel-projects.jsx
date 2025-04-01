@@ -37,9 +37,10 @@ export const CarouselProjects = () => {
 	}, []);
 
 	return (
-		<div className="relative w-[334px] h-[216px] mx-auto overflow-hidden rounded-lg shadow-lg">
-			<div
-				className="flex transition-transform duration-700 ease-in-out"
+		<div className="relative w-full h-full mx-auto overflow-hidden rounded-lg shadow-lg">
+			<div className='bg-red-400 w-full h-full'></div>
+			{/* <div
+				className="flex transition-transform duration-700 ease-in-out w-[263px] h-full"
 				style={{ transform: `translateX(-${currentIndex * 100}%)` }}
 			>
 				{images.map((src, index) => (
@@ -61,7 +62,7 @@ export const CarouselProjects = () => {
 						onClick={() => setCurrentIndex(index)}
 					></button>
 				))}
-			</div>
+			</div> */}
 		</div>
 	);
 }
