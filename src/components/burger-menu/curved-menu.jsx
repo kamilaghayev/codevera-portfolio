@@ -33,9 +33,9 @@ export const CurvedMenu = ({ setIsOpen }) => {
 			>
 				<div className="box-border h-screen max-xs-3:px-8 px-[100px]  flex flex-col items-center justify-between">
 					<div className='w-full'>
-						<div className='w-full flex justify-start mt-4 h-10 items-center'>
+						{/* <div className='w-full flex justify-start mt-4 h-10 items-center'>
 							<ChangeTheme variant={'revert'}/>
-						</div>
+						</div> */}
 						<div
 							className="w-full flex flex-col text-[56px] gap-3 pt-10"
 							onMouseLeave={() => setSelectedIndicator(pathname)}

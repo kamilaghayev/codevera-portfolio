@@ -107,8 +107,8 @@ export const Header = () => {
 		<header className='w-full min-h-16 flex-center sticky top-0 pt-2 z-[44]'>
 			<div className='relative mx-2.5 xs-3:mx-auto flex items-center gap-16 justify-between px-5 h-full w-full xs-3:w-9/12 md:w-fit min-h-[52px] rounded-4xl bg-[#F5F5F5] '>
 				
-				<Link href={getUrls().home()}>
-					<Image src={'/logo.png'} width={100} height={90} alt='CodeVera' />
+				<Link href={getUrls().home()} className='flex items-center w-[100px] h-[50px] overflow-hidden'>
+					<Image src={'/logo.svg'} width={140} height={50} alt='CodeVera' />
 				</Link>
 
 				<nav className='hidden md:block'>
