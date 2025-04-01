@@ -36,7 +36,7 @@ export const AboutUs = () => {
 						systems and other services.
 					</p>
 					<div className="flex justify-center md:justify-start">
-					    <MoreButton />
+					    <MoreButton path="/about" />
 					</div>
 				</div>
 				<ul className="w-full lg:w-[60%] grid justify-items-center md:grid-cols-2 gap-6 lg:justify-items-end">
