@@ -116,7 +116,7 @@ export const Header = () => {
 						{NavLinks.map((link, index) => (
 							<li
 								key={`${link?.href}-${index}`}
-								className='flex-center transition-all cursor-pointer py-2 rounded-full hover:text-primary-500'
+								className='flex-center transition-all cursor-pointer py-2 rounded-full hover:text-[#8ac44f]'
 							>
 								{link?.children
 									? navbarDropdown(link)

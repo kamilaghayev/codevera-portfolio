@@ -10,7 +10,7 @@ export const Introduction = () => {
 							id='introduction' 
 						>
 							Creating 
-							{' '}<span className='text-primary-500'>any type of website</span>{' '}
+							{' '}<span className='text-[#8ac44f]'>any type of website</span>{' '}
 							for your business
 						</h1>
 
