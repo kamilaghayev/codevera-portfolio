@@ -1,6 +1,7 @@
 import { Geist, Nunito_Sans } from "next/font/google";
 import Providers from './(initialize)/providers';
 import { Header, Footer } from '@/components';
+import '@ant-design/v5-patch-for-react-19';
 import "./globals.css";
 
 const geistSans = Geist({
