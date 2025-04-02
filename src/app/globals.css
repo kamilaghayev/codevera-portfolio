@@ -18,10 +18,15 @@ body {
     padding: 0;
     margin: 0;
     text-decoration: none;
+    scroll-margin-top: 80px;
     scroll-behavior: smooth;
 }
 html {
+    scroll-margin-top: 80px;
     scroll-behavior: smooth;
+}
+section {
+    scroll-margin-top: 80px;
 }
 .container-center {
     @apply max-sm:w-full sm:container mx-auto px-2.5 xs-2:px-4 sm:p-0;

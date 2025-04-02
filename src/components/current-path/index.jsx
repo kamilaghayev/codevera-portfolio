@@ -3,10 +3,10 @@ import React from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
-export const CurrentPath = () => {
+export const CurrentPath = ({customLastPath}) => {
     const pathname = usePathname()
     const path = pathname.split('/').filter(Boolean)
-    const lastPath = path[path.length - 1].charAt(0).toUpperCase() + path[path.length - 1].slice(1)
+    const lastPath = customLastPath ?? path[path.length - 1].charAt(0).toUpperCase() + path[path.length - 1].slice(1)
     console.log(pathname);
   return (
     <section aria-labelledby='our-projects' id='portfolio'>

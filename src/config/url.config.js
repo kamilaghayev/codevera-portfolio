@@ -12,6 +12,7 @@ export const APP_URLS = {
 	about: (url = '', queryParams = {}) => APP_URLS.ROOT(`#about${url}`, queryParams),
 	portfolio: (url ='', queryParams = {}) => APP_URLS.ROOT(`#portfolio${url}`, queryParams),
 	contact: (url = '', queryParams = {}) => APP_URLS.ROOT(`#contact${url}`, queryParams),
+	contactUs: (url = '', queryParams = {}) => APP_URLS.ROOT(`/contact${url}`, queryParams),
 }
 
 export const getUrls = () => APP_URLS;
