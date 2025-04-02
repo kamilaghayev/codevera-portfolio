@@ -1,11 +1,7 @@
-import React from 'react'
 import Image from 'next/image'
 import { ContactButton } from '@/components'
-import Link from 'next/link'
-import { getUrls } from '@/config/url.config'
 
 export const ContactUs = () => {
-    const urls = getUrls()
     return (
         <section id='contact' aria-labelledby='contact-us'>
             <div className='container-center flex flex-col gap-6 sm:gap-10 lg:gap-14'>
@@ -17,9 +13,7 @@ export const ContactUs = () => {
                             <h3 className='text-lg sm:text-xl lg:text-2xl font-semibold'>(+994) 77 777 77 77</h3>
                             <p className='text-sm sm:text-base lg:text-lg'>If you have any ideas or projects in mind, call us. We will make them happen as soon as possible.</p>
                         </div>
-                        <Link href={urls.contactUs()}>
-                            <ContactButton/>
-                        </Link>
+                        <ContactButton/>
                     </div>
                 </div>
             </div>

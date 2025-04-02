@@ -1,57 +1,79 @@
 'use client'
 
 import { SendButton } from '@/components';
+import { message } from 'antd';
+import { useState } from 'react';
 
-const  BASE_URL = 'https://flow.cavidhuseynov.me/'
-const sendEmail = async (form) => {
-	const formData = new FormData(form);
-	const body = {
-		'fullName': formData.get('fullName'),
-		'email': formData.get('email'),
-		'subject': formData.get('subject'),
-		'comment': formData.get('comment')
-	}
-	try {
-		const response = await fetch(`${BASE_URL}/Contact/send-email`, {
-			method: 'POST',
-			body: JSON.stringify(body)
-		})
-		
-		if (!response.ok) {
-			
-		}
-
-		const data = await response.json();
-
-
-	} catch (error) {
-		
-	}
-}
+// const  BASE_URL = 'https://flow.cavidhuseynov.me'
+const BASE_URL = 'https://flowapplication-001-site1.anytempurl.com/api'
 export const ContactUsForm = () => {
-	const inputStyle = 'border border-gray-700 focus:border-primary-600 outline-none focus:outline-none p-2 rounded-3xl'
-	return (
-		<form className="" onSubmit={sendEmail}>
-			<h1 className='text-6xl font-semibold lg:pt-7 lg:pb-5'>Contact us</h1>
+	const [loading, setloading] = useState(false);
 
-			<div className='flex flex-col gap-5 max-w-[500px] pt-3'>
+
+	const [messageApi, contextHolder] = message.useMessage();
+
+	const success = () => {
+		messageApi.open({
+			type: 'success',
+			content: 'successfully sended',
+		});
+	};
+	const sendEmail = async (e) => {
+		e.preventDefault();
+		const formData = new FormData(e.target);
+		debugger
+		setloading(true)
+		const body = {
+			'fullName': formData.get('fullName'),
+			'email': formData.get('email'),
+			'subject': formData.get('subject'),
+			'comment': formData.get('comment')
+		}
+		try {
+			const response = await fetch(`${BASE_URL}/Contact/send-email`, {
+				method: 'POST',
+				body: body,
+				'Content-type': 'application/json'
+			})
+			
+			if (!response.ok) {
+			}
+			
+			if (response.status === 200) {
+				success()
+			}
+			return  await response.json();
+	
+	
+		} catch (error) {
+			
+		} finally {
+			setloading(false)
+		}
+	}
+
+	const inputStyle = 'border border-gray-700 focus:border-primary-600 outline-none focus:outline-none p-3 rounded-2xl'
+	return (
+		<form onSubmit={sendEmail} className="w-[500px]">
+
+			<div className='flex flex-col gap-5 pt-10 w-full'>
 				<div className='flex flex-col gap-2'>
 					<label htmlFor='fullName'>Full name</label>
-					<input type="text" id='fullName' className={inputStyle} required/>
+					<input type="text" name='fullName' id='fullName' className={inputStyle} required/>
 				</div>
 				<div className='flex flex-col gap-2'>
 					<label htmlFor='email'>Email</label>
-					<input type="email" id='email' className={inputStyle} required/>
+					<input type="email" name='email' id='email' className={inputStyle} required/>
 				</div>
 				<div className='flex flex-col gap-2'>
 					<label htmlFor='subject'>Subject</label>
-					<input type="text" id='subject' className={inputStyle} required/>
+					<input type="text" name='subject' id='subject' className={inputStyle} required/>
 				</div>
 				<div className='flex flex-col gap-2'>
 					<label htmlFor='comment'>Message</label>
-					<textarea id='comment' className={inputStyle} required/>
+					<textarea id='comment' name='comment' className={inputStyle} required/>
 				</div>
-				<SendButton type="submit"/>
+				<SendButton type="submit" disabled={loading}/>
 			</div>
 		</form>
 	)

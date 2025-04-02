@@ -7,10 +7,17 @@ export const ContactPage = () => {
 		<div className='container-center'>
 			<CurrentPath customLastPath={"Contact"}/>
 
-			<div className='w-full grid lg:grid-cols-2 pt-3'>
-				<ContactUsForm/>
-				<div className='relative w-full aspect-square'>
-					<Image src={'/jpg/contact-us.jpg'} alt='Contact us' fill/>
+			<div className='w-full grid grid-cols-1 xl:grid-cols-12 pt-3 items-center justify-center xl:justify-between'>
+
+				<div className="w-full col-span-5">
+					<h1 className='text-6xl font-semibold pt-5 lg:pt-7 lg:pb-5 max-xl:flex max-xl:justify-center '>Contact us</h1>
+					<div className="hidden xl:flex xl:w-[600px] xl:h-[600px]">
+						<Image src={'/png/contact-us.png'} alt='Contact us' width={600} height={600}/>
+					</div>
+				</div>
+				<div className='col-span-7 flex justify-center w-full'>
+					<ContactUsForm/>
+
 				</div>
 			</div>
 		</div>
