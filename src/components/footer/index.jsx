@@ -22,13 +22,13 @@ export const Footer = () => {
             <Link key={index} href={section.link} className='text-sm sm:text-base lg:text-lg hover:text-[#141414] cursor-pointer'>{section.name}</Link>
         ))}
       </ul>
-      <div className='flex gap-10 text-2xl'>
+      {/* <div className='flex gap-10 text-2xl'>
         <FaFacebookF className='hover:text-[#141414] cursor-pointer'/>
         <FaInstagram className='hover:text-[#141414] cursor-pointer'/>
         <FaLinkedin className='hover:text-[#141414] cursor-pointer'/>
         <FaGithub className='hover:text-[#141414] cursor-pointer'/>
         <FaYoutube className='hover:text-[#141414] cursor-pointer'/>
-      </div>
+      </div> */}
       <span className='text-sm sm:text-base lg:text-lg'>© 2025 CodeVera, Inc. All rights reserved.</span>
     </div>
   )

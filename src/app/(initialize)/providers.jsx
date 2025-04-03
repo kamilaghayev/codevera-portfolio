@@ -6,8 +6,20 @@ function composeProviders(providers) {
         return providers.reduceRight((acc, Provider) => <Provider>{acc}</Provider>, children);
     };
 }
-
-const CombinedProviders = composeProviders([AntdRegistry, ThemeStoreProvider]);
+const AntdTheme = ({children}) => {
+    return (
+        <AntdRegistry
+            theme={{
+                token: {
+                    colorPrimary: '#8ac44f'
+                }
+            }}
+        >
+            {children}
+        </AntdRegistry>
+    )
+}
+const CombinedProviders = composeProviders([AntdTheme, ThemeStoreProvider]);
 
 const Providers = ({ children }) => {
     return <CombinedProviders>{children}</CombinedProviders>;

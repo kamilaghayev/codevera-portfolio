@@ -21,7 +21,6 @@ export const ContactUsForm = () => {
 	const sendEmail = async (e) => {
 		e.preventDefault();
 		const formData = new FormData(e.target);
-		debugger
 		setloading(true)
 		const body = {
 			'fullName': formData.get('fullName'),

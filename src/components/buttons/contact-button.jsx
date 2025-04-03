@@ -8,7 +8,6 @@ import { FaArrowRight } from "react-icons/fa6";
 const urls = getUrls();
 
 export const ContactButton = ({ path = urls.contactUs()  , props }) => {
-  debugger
   const router = useRouter();
   const handleClick = () => router.push(path)
   return (

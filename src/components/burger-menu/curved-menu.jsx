@@ -53,11 +53,11 @@ export const CurvedMenu = ({ setIsOpen }) => {
 							))}
 						</div>
 					</div>
-					<div className="flex xs-3:w-full justify-between text-sm gap-10 pb-10">
+					{/* <div className="flex xs-3:w-full justify-between text-sm gap-10 pb-10">
 						<a>Instagram</a>
 						<a>LinkedIn</a>
 						<a>Twitter</a>
-					</div>
+					</div> */}
 				</div>
 				<Curve />
 			</motion.div>
