@@ -32,7 +32,9 @@ export const ContactUsForm = () => {
 			const response = await fetch(`${BASE_URL}/Contact/send-email`, {
 				method: 'POST',
 				body: JSON.stringify(body),
-				'Content-type': 'application/json'
+				headers: {
+					'Content-type': 'application/json'
+				}
 			})
 			
 			if (!response.ok) {
