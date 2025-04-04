@@ -7,7 +7,7 @@ export const AboutCard = ({ parentTag = 'div', name = "Development of Websites",
 				<p className="text-sm sm:text-base lg:text-lg line-clamp-2">
 					{description}
 				</p>
-				<div className="w-full flex gap-2 flex-wrap max-h-[72px] overflow-y-scroll">
+				<div className="w-full flex gap-2 flex-wrap max-h-[72px] overflow-y-auto">
 					{categories?.map((category, index) => (
 						<div key={index} className="px-3 py-1 bg-[#E6E6E6] text-[#141414] rounded-full text-xs sm:text-sm lg:text-base font-medium">
 						    {category}

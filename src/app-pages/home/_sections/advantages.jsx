@@ -34,7 +34,7 @@ export const Advantages = () => {
     <section id='advantages' aria-labelledby='advantages'>
         <div className='container-center flex flex-col gap-6 sm:gap-10 lg:gap-14'>
             <h2 id='advantages' className='text-3xl sm:text-4xl lg:text-6xl font-semibold'>Advantages</h2>
-            <div className='flex gap-5 overflow-x-scroll'>
+            <div className='flex gap-5 overflow-x-auto'>
                 {advantagesData?.map((item, index) => (
                     <AdvantageCard
                         key={index}

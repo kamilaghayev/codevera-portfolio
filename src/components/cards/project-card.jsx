@@ -10,7 +10,7 @@ export const ProjectCard = ({ name = "CodeVera", src = "/project.png", link = "h
         </Link>
         <div className='flex flex-col gap-2 sm:gap-4'>
             <h3 className='text-xl sm:text-3xl lg:text-4xl font-semibold'>{name}</h3>
-            <div className="w-full flex gap-4 flex-nowrap overflow-x-scroll pb-3">
+            <div className="w-full flex gap-4 flex-nowrap overflow-x-auto pb-3">
                 {types.map((type, index) => (
                     <div key={index} className="min-w-fit px-4 py-2 bg-[#E6E6E6] text-[#141414] rounded-full text-xs sm:text-sm lg:text-base font-medium">
                         {type}
