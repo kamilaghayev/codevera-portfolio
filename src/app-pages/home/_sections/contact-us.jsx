@@ -10,8 +10,8 @@ export const ContactUs = () => {
                     <Image src='/webp/envelop.webp' alt='envelop image' width={400} height={250} />
                     <div className='flex flex-col justify-between gap-6'>
                         <div className='text-[#141414] flex flex-col gap-2'>
-                            <h3 className='text-lg sm:text-xl lg:text-2xl font-semibold'>(+994) 77 777 77 77</h3>
-                            <p className='text-sm sm:text-base lg:text-lg'>If you have any ideas or projects in mind, call us. We will make them happen as soon as possible.</p>
+                            <h3 className='text-lg sm:text-xl lg:text-2xl font-semibold'>Bringing Your Vision to Life, Fast</h3>
+                            <p className='text-sm sm:text-base lg:text-lg max-w-[700px]'>If you have any ideas or projects in mind, call us. We will make them happen as soon as possible.</p>
                         </div>
                         <ContactButton/>
                     </div>
