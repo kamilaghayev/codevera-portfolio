@@ -1,6 +1,5 @@
-
 export function cls(...args) {
-    const flatten = (arr)  =>
+    const flatten = (arr) =>
         arr.reduce((acc, val) => {
             if (val === null || val === undefined) return acc;
             return acc.concat(Array.isArray(val) ? flatten(val) : val);

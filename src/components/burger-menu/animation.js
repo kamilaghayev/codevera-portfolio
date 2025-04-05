@@ -1,4 +1,3 @@
-
 export const cubicBezier = [0.76, 0, 0.24, 1];
 export const menuSlide = {
     initial: {
@@ -48,4 +47,4 @@ export const fadeInOut = {
     initial: { opacity: 0 },
     enter: { opacity: 1, transition: { duration: 0.8, ease: cubicBezier } },
     exit: { opacity: 0, transition: { duration: 0.8, ease: cubicBezier } },
-}
+};

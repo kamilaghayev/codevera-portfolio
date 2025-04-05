@@ -1,6 +1,3 @@
+import { FaqCollapse } from './faq-collapse';
 
-import { FaqCollapse } from "./faq-collapse";
-
-export {
-    FaqCollapse,
-}
+export { FaqCollapse };

@@ -1,10 +1,5 @@
-
-import { MoreButton } from "./more-button";
-import { ContactButton } from "./contact-button";
+import { ContactButton } from './contact-button';
+import { MoreButton } from './more-button';
 import { SendButton } from './send-button';
 
-export {
-    MoreButton,
-    ContactButton,
-    SendButton
-}
+export { MoreButton, ContactButton, SendButton };

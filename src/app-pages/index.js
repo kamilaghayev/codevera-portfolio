@@ -1,11 +1,6 @@
-
-import { HomePage } from './home';
-import { PortfolioPage } from './portfolio';
 import { AboutPage } from './about';
 import { ContactPage } from './contact';
-export {
-	HomePage,
-	PortfolioPage,
-	AboutPage,
-	ContactPage
-}
+import { HomePage } from './home';
+import { PortfolioPage } from './portfolio';
+
+export { HomePage, PortfolioPage, AboutPage, ContactPage };

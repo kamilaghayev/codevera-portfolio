@@ -1,14 +1,10 @@
-export * from "./cards";
-export * from "./buttons";
-export * from "./swipers";
-export * from "./collapses";
-
+import { CurrentPath } from './current-path';
+import { Footer } from './footer';
 import { Header } from './header';
-import { Footer } from "./footer";
-import { CurrentPath } from "./current-path";
 
-export {
-	Header,
-	Footer,
-	CurrentPath,
-}
+export * from './cards';
+export * from './buttons';
+export * from './swipers';
+export * from './collapses';
+
+export { Header, Footer, CurrentPath };

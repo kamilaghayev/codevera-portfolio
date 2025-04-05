@@ -1,6 +1,3 @@
+import { Ourselves } from './ourselves';
 
-import { Ourselves } from "./ourselves";
-
-export {
-    Ourselves,
-};
+export { Ourselves };

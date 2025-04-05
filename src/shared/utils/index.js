@@ -1,10 +1,5 @@
-
 import { cls } from './cls';
-import { queryParamsBuilder } from './queryParamsBuilder';
 import { degreesToRadians } from './degreesToRadians';
+import { queryParamsBuilder } from './queryParamsBuilder';
 
-export {
-	cls,
-	queryParamsBuilder,
-	degreesToRadians
-}
+export { cls, queryParamsBuilder, degreesToRadians };

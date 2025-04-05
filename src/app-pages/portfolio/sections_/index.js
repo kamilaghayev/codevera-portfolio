@@ -1,6 +1,3 @@
+import { OurProject } from './our-project';
 
-import { OurProject } from "./our-project";
-
-export {
-    OurProject,
-};
+export { OurProject };
