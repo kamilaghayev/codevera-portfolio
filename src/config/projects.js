@@ -35,4 +35,34 @@ export const projects = [
         link: 'https://rahatviza.az/',
         types: ['Corporative', 'Business'],
     },
+    {
+        name: 'Hərrac.gov.az',
+        src: '/png/herrac-gov-az.png',
+        link: 'https://herrac.gov.az/',
+        types: ['Ecommerce', 'Business'],
+    },
+    {
+        name: 'Get Joiner',
+        src: '/png/get-joiner.png',
+        link: 'https://getjoiner.com/',
+        types: ['Corporative', 'Business'],
+    },
+    {
+        name: 'Kimco Realty',
+        src: '/png/kimco-realty.png',
+        link: 'https://www.kimcorealty.com/',
+        types: ['Corporative', 'Business'],
+    },
+    {
+        name: 'Clark Builders',
+        src: '/png/clark-builders.png',
+        link: 'https://www.clarkbuilders.com/',
+        types: ['Ecommerce', 'Business'],
+    },
+    {
+        name: "Gold's Gym Sandton",
+        src: '/png/golds-gym-sandton.png',
+        link: 'https://goldsgymsandton.co.za/',
+        types: ['Ecommerce', 'Business'],
+    },
 ];
