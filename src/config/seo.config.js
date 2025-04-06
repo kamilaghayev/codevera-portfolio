@@ -4,7 +4,8 @@ const baseUrl = 'https://www.codevera.tech';
 const baseTitle = 'Codevera - Web Solutions for Your Business';
 const baseDescription =
     'Codevera specializes in developing advanced web solutions, including E-commerce, CMS, ERP systems, and custom business applications.';
-const baseKeywords = 'Codevera, web development, E-commerce, CMS, ERP, web applications, business solutions';
+const baseKeywords =
+    'Codevera, web development, E-commerce, CMS, ERP, web applications, business solutions, headless commerce, custom software, SaaS, web agency';
 const baseAuthor = 'Codevera Team';
 const baseImage = 'https://www.codevera.tech/screenshots/codevera.png';
 
@@ -13,6 +14,7 @@ const homepageImage = `${baseImage}/og/home.webp`;
 export const metadataMain = {
     title: baseTitle,
     description: baseDescription,
+    keywords: baseKeywords,
     coverage: 'Worldwide',
     openGraph: {
         title: baseTitle,
@@ -41,7 +43,6 @@ export const metadataMain = {
                 height: 630,
             },
         ],
-        images: [],
     },
 };
 
@@ -52,6 +53,8 @@ const portfolioImage = `${baseImage}/og/portfolio.webp`;
 export const metadataPortfolio = {
     title: portfolioTitle,
     description: `${baseDescription}. ${portfolioDescription}`,
+    keywords:
+        'Codevera portfolio, web development showcase, web app examples, custom solutions, eCommerce portfolio, ERP systems examples, CMS projects',
     openGraph: {
         title: portfolioTitle,
         description: portfolioDescription,
@@ -70,9 +73,12 @@ export const metadataPortfolio = {
 const aboutTitle = 'About Us - Codevera Web Development';
 const aboutDescription = 'Learn more about Codevera, our mission, and our team of web development experts.';
 const aboutImage = `${baseImage}/og/about.webp`;
+
 export const metadataAbout = {
     title: aboutTitle,
     description: `${baseDescription}. ${aboutDescription}`,
+    keywords:
+        'About Codevera, web development team, Codevera mission, software agency, expert developers, business tech experts',
     openGraph: {
         title: aboutTitle,
         description: aboutDescription,
@@ -87,13 +93,16 @@ export const metadataAbout = {
         type: 'website',
     },
 };
-const contactImage = `${baseImage}/og/contact.webp`;
 
+const contactImage = `${baseImage}/og/contact.webp`;
 const contactTitle = 'Contact Us - Codevera Web Development';
 const contactDescription = 'Get in touch with Codevera for your web development needs. We are here to help you.';
+
 export const metadataContact = {
     title: contactTitle,
     description: `${baseDescription}. ${contactDescription}`,
+    keywords:
+        'Contact Codevera, get a quote, web development inquiry, tech consultation, hire developers, contact software team, start project',
     openGraph: {
         title: contactTitle,
         description: contactDescription,
@@ -108,22 +117,3 @@ export const metadataContact = {
         type: 'website',
     },
 };
-
-export const sitemapConfig = [
-    {
-        url: `${baseUrl}/`,
-        lastModified: new Date(),
-    },
-    {
-        url: `${baseUrl}/about`,
-        lastModified: new Date(),
-    },
-    {
-        url: `${baseUrl}/portfolio`,
-        lastModified: new Date(),
-    },
-    {
-        url: `${baseUrl}/contact`,
-        lastModified: new Date(),
-    },
-];
