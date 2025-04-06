@@ -1,5 +1,6 @@
 import { ThemeStoreProvider } from '@/features/change-theme/change-theme.provider';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
+import { ProgressBar } from './progress-bar';
 
 function composeProviders(providers) {
     return function ComposedProviders({ children }) {
@@ -19,7 +20,7 @@ const AntdTheme = ({children}) => {
         </AntdRegistry>
     )
 }
-const CombinedProviders = composeProviders([AntdTheme, ThemeStoreProvider]);
+const CombinedProviders = composeProviders([ProgressBar, AntdTheme, ThemeStoreProvider]);
 
 const Providers = ({ children }) => {
     return <CombinedProviders>{children}</CombinedProviders>;

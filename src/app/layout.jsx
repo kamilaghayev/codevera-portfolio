@@ -4,6 +4,7 @@ import { Header, Footer } from '@/components';
 import { metadataMain } from '@/config/seo.config';
 import '@ant-design/v5-patch-for-react-19';
 import "./globals.css";
+import { LaptopContainer } from './(initialize)/laptop-initialize';
 
 const nunito = Nunito_Sans({
   variable: "--font-nunito",
@@ -19,13 +20,17 @@ export default function RootLayout({ children }) {
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <body
-        className={`${nunito.variable} antialiased`}
+        className={`${nunito.variable} antialiased overflow-x-hidden`}
       >
         <Providers>
           <Header />
           {children}
           <Footer />
         </Providers>
+        <div className='overflow-hidden'>
+          <LaptopContainer/>
+
+        </div>
       </body>
     </html>
   );

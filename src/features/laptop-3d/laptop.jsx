@@ -5,6 +5,7 @@ import { Canvas } from '@react-three/fiber'
 import { Environment, ContactShadows, OrbitControls } from '@react-three/drei'
 import { MacBook3d } from './MacBook'
 import Spinner from '@/components/loader/spinner'
+import { getLaptop } from '@/app/(initialize)/laptop-initialize'
 
 export default function Laptop() {
 
@@ -37,6 +38,6 @@ export default function Laptop() {
 				</Suspense>
 			</div>
 		</div>,
-		document.body
+		getLaptop()
 	);
 }

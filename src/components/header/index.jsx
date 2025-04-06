@@ -112,11 +112,11 @@ export const Header = () => {
 				</Link>
 
 				<nav className='hidden md:block'>
-					<ul className='flex gap-5'>
+					<ul className='flex gap-5 items-center'>
 						{NavLinks.map((link, index) => (
 							<li
 								key={`${link?.href}-${index}`}
-								className='flex-center transition-all cursor-pointer py-2 rounded-full hover:text-[#8ac44f]'
+								className='flex-center transition-all cursor-pointer rounded-full hover:text-[#8ac44f]'
 							>
 								{link?.children
 									? navbarDropdown(link)

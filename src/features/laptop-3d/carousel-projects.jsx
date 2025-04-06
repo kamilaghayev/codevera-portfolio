@@ -41,7 +41,7 @@ export const CarouselProjects = () => {
 
 	return (
 		<div className="relative w-full h-full mx-auto overflow-hidden rounded-lg shadow-lg">
-			<Image src={'/png/macbook-browser.png'} alt='navbar' className='pt-0' width={800} height={22}/>
+			<Image src={'/webp/macbook-browser.webp'} alt='navbar' className='pt-0' width={800} height={22}/>
 			<div className='flex transition-all duration-500' style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
 				{projects.map((project, index) => (
 					<div key={index} className='w-full min-w-full min-h-full transition-all duration-500'>
@@ -64,7 +64,7 @@ export const CarouselProjects = () => {
 				))}
 			</div> */}
 			<div className='flex justify-center scale-[1.28] -translate-x-6.5 -translate-y-3'>
-				<Image src={'/png/macbook-navbar.png'} alt='navbar' width={880} height={200}/>
+				<Image src={'/webp/macbook-navbar.webp'} alt='navbar' width={880} height={200}/>
 			</div>
 
 			{/* <div
