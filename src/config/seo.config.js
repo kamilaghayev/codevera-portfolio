@@ -1,40 +1,64 @@
+const siteName = 'Codevera Web Solutions';
+
+const baseUrl = 'https://www.codevera.tech';
+const baseTitle = 'Codevera - Web Solutions for Your Business';
+const baseDescription =
+    'Codevera specializes in developing advanced web solutions, including E-commerce, CMS, ERP systems, and custom business applications.';
+const baseKeywords = 'Codevera, web development, E-commerce, CMS, ERP, web applications, business solutions';
+const baseAuthor = 'Codevera Team';
+const baseImage = 'https://www.codevera.tech/screenshots/codevera.png';
+
+const homepageImage = `${baseImage}/og/home.webp`;
+
 export const metadataMain = {
-    title: 'Codevera - Web Solutions for Your Business',
-    description:
-        'Codevera specializes in developing advanced web solutions, including E-commerce, CMS, ERP systems, and custom business applications.',
+    title: baseTitle,
+    description: baseDescription,
+    coverage: 'Worldwide',
     openGraph: {
-        title: 'Codevera - Web Solutions for Your Business',
-        description:
-            'From websites to full-scale E-commerce, ERP and CMS solutions, Codevera provides top-tier web development services.',
-        url: 'https://www.codevera.tech/',
-        siteName: 'Codevera Web Solutions',
+        title: baseTitle,
+        description: baseDescription,
+        url: baseUrl,
+        siteName: siteName,
         images: [
             {
-                url: 'https://www.codevera.tech/codevera.png',
+                url: homepageImage,
                 width: 1200,
                 height: 630,
             },
         ],
+        author: baseAuthor,
         locale: 'en_US',
         type: 'website',
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Codevera - Web Solutions for Your Business',
-        description: 'We create custom E-commerce, CMS, ERP, and web applications to scale your business.',
-        images: ['https://www.codevera.tech/screenshots/codevera.png'],
+        title: baseTitle,
+        description: baseDescription,
+        images: [
+            {
+                url: homepageImage,
+                width: 1200,
+                height: 630,
+            },
+        ],
+        images: [],
     },
 };
 
+const portfolioTitle = 'Portfolio - Codevera Web Development';
+const portfolioDescription = 'A showcase of Codevera’s best work, from websites to enterprise-grade web applications.';
+const portfolioImage = `${baseImage}/og/portfolio.webp`;
+
 export const metadataPortfolio = {
-    title: 'Portfolio - Codevera Web Development',
+    title: portfolioTitle,
+    description: `${baseDescription}. ${portfolioDescription}`,
     openGraph: {
-        title: 'Portfolio - Codevera Web Development',
-        description: 'A showcase of Codevera’s best work, from websites to enterprise-grade web applications.',
-        url: 'https://www.codevera.tech/screenshots/screenshots',
+        title: portfolioTitle,
+        description: portfolioDescription,
+        url: `${baseUrl}/portfolio`,
         images: [
             {
-                url: 'https://www.codevera.tech/screenshots/screenshots',
+                url: portfolioImage,
                 width: 1200,
                 height: 630,
             },
@@ -42,18 +66,20 @@ export const metadataPortfolio = {
         type: 'website',
     },
 };
+
+const aboutTitle = 'About Us - Codevera Web Development';
+const aboutDescription = 'Learn more about Codevera, our mission, and our team of web development experts.';
+const aboutImage = `${baseImage}/og/about.webp`;
 export const metadataAbout = {
-    title: 'Contact Us - Codevera Web Development',
-    description:
-        'Get in touch with Codevera for professional web development services, including CMS, ERP, and business applications.',
+    title: aboutTitle,
+    description: `${baseDescription}. ${aboutDescription}`,
     openGraph: {
-        title: 'Contact Us - Codevera Web Development',
-        description:
-            'Reach out to us to discuss your project. We specialize in custom E-commerce CMS, ERP, and web development solutions.',
-        url: 'https://your-portfolio.com/contact',
+        title: aboutTitle,
+        description: aboutDescription,
+        url: `${baseUrl}/about`,
         images: [
             {
-                url: 'https://your-portfolio.com/contact-preview.jpg',
+                url: aboutImage,
                 width: 1200,
                 height: 630,
             },
@@ -61,21 +87,43 @@ export const metadataAbout = {
         type: 'website',
     },
 };
+const contactImage = `${baseImage}/og/contact.webp`;
+
+const contactTitle = 'Contact Us - Codevera Web Development';
+const contactDescription = 'Get in touch with Codevera for your web development needs. We are here to help you.';
+export const metadataContact = {
+    title: contactTitle,
+    description: `${baseDescription}. ${contactDescription}`,
+    openGraph: {
+        title: contactTitle,
+        description: contactDescription,
+        url: `${baseUrl}/contact`,
+        images: [
+            {
+                url: contactImage,
+                width: 1200,
+                height: 630,
+            },
+        ],
+        type: 'website',
+    },
+};
+
 export const sitemapConfig = [
     {
-        url: 'https://www.codevera.tech/',
+        url: `${baseUrl}/`,
         lastModified: new Date(),
     },
     {
-        url: 'https://www.codevera.tech/about',
+        url: `${baseUrl}/about`,
         lastModified: new Date(),
     },
     {
-        url: 'https://www.codevera.tech/portfolio',
+        url: `${baseUrl}/portfolio`,
         lastModified: new Date(),
     },
     {
-        url: 'https://www.codevera.tech/contact',
+        url: `${baseUrl}/contact`,
         lastModified: new Date(),
     },
 ];
