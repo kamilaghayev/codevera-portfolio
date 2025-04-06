@@ -16,7 +16,7 @@ export const Introduction = () => {
 
 					</div>
 					{/* 3d section */}
-					<div className='flex items-center justify-end pt-10 md:pt-0'>
+					<div className='flex items-center justify-end pt-28 md:pt-0'>
 						{/* <div className='w-full md:min-w-[660px] min-w-[400px] min-h-[400px] md:min-h-[550px] md:h-[550px] overflow-hidden aspect-square'> */}
 							<Laptop3d/>
 						{/* </div> */}

@@ -105,7 +105,7 @@ export const Header = () => {
 	}
 	return (
 		<header className='w-full min-h-16 flex-center sticky top-0 pt-2 z-[44]'>
-			<div className='relative mx-2.5 xs-3:mx-auto flex items-center gap-16 justify-between px-5 h-full w-full xs-3:w-9/12 md:w-fit min-h-[52px] rounded-4xl bg-[#F5F5F5] '>
+			<div className='relative mx-2.5 xs-3:mx-auto flex items-center gap-16 justify-between px-5 h-full w-full xs-3:w-9/12 md:w-fit min-h-[52px] rounded-4xl bg-[#F5F5F5] shadow-[0_8px_30px_rgb(0,0,0,0.12)]'>
 				
 				<Link href={getUrls().home()} className='flex items-center w-[100px] h-[50px] overflow-hidden -translate-y-1 hover:scale-110 transition-all duration-300'>
 					<Image src={'/logo.svg'} width={200} height={50} alt='CodeVera' className='scale-125'/>
