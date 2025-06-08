@@ -1,9 +1,12 @@
-'use client'
+'use client';
+
+import { useEffect, useState } from 'react';
+
 import { ProjectCard } from '@/components';
 import { projects } from '@/config/projects';
-import { cls } from '@/shared/utils';
 import Image from 'next/image';
-import { useState, useEffect } from "react";
+
+import { cls } from '@/shared/utils';
 
 // .content {
 //     width: 334px;
@@ -23,36 +26,50 @@ import { useState, useEffect } from "react";
 // }
 
 const images = [
-	"https://via.placeholder.com/800x400/FF5733/ffffff?text=Slide+1",
-	"https://via.placeholder.com/800x400/33FF57/ffffff?text=Slide+2",
-	"https://via.placeholder.com/800x400/3357FF/ffffff?text=Slide+3",
+    'https://via.placeholder.com/800x400/FF5733/ffffff?text=Slide+1',
+    'https://via.placeholder.com/800x400/33FF57/ffffff?text=Slide+2',
+    'https://via.placeholder.com/800x400/3357FF/ffffff?text=Slide+3',
 ];
 
 export const CarouselProjects = () => {
-	const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(0);
 
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-		}, 4000);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 4000);
 
-		return () => clearInterval(interval);
-	}, []);
+        return () => clearInterval(interval);
+    }, []);
 
-	return (
-		<div className="relative w-full h-full mx-auto overflow-hidden rounded-lg shadow-lg">
-			<Image src={'/webp/macbook-browser.webp'} alt='navbar' className='pt-0' width={800} height={22}/>
-			<div className='flex transition-all duration-500' style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-				{projects.map((project, index) => (
-					<div key={index} className='w-full min-w-full min-h-full transition-all duration-500'>
-						<div className='w-full aspect-video bg-[#F5F5F5]'>
-							<div style={{ backgroundImage: `url(${project.src})` }} className='w-full h-full bg-cover'></div>
-						</div>
-					</div>
-				))}
-			</div>
-			
-			{/* <div className='flex items-center justify-center gap-3 pt-3'>
+    return (
+        <div className="relative w-full h-full mx-auto overflow-hidden rounded-lg shadow-lg">
+            <Image
+                src={
+                    'https://cavid.s3.eu-north-1.amazonaws.com/Uploads/cavid/image/2f0596bd-fb78-4484-bd39-322f078c7f7e_macbook-browser.webp'
+                }
+                alt="navbar"
+                className="pt-0"
+                width={800}
+                height={22}
+            />
+            <div
+                className="flex transition-all duration-500"
+                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+                {projects.map((project, index) => (
+                    <div key={index} className="w-full min-w-full min-h-full transition-all duration-500">
+                        <div className="w-full aspect-video bg-[#F5F5F5]">
+                            <div
+                                style={{ backgroundImage: `url(${project.src})` }}
+                                className="w-full h-full bg-cover"
+                            ></div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            {/* <div className='flex items-center justify-center gap-3 pt-3'>
 				{projects.map((project, idx) => (
 					<button 
 						className={cls(
@@ -63,11 +80,18 @@ export const CarouselProjects = () => {
 					/>
 				))}
 			</div> */}
-			<div className='flex justify-center scale-[1.28] -translate-x-6.5 -translate-y-3'>
-				<Image src={'/webp/macbook-navbar.webp'} alt='navbar' width={880} height={200}/>
-			</div>
+            <div className="flex justify-center scale-[1.28] -translate-x-6.5 -translate-y-3">
+                <Image
+                    src={
+                        'https://cavid.s3.eu-north-1.amazonaws.com/Uploads/cavid/image/ba2c4977-2478-4d11-869d-7e560a276771_macbook-navbar.webp'
+                    }
+                    alt="navbar"
+                    width={880}
+                    height={200}
+                />
+            </div>
 
-			{/* <div
+            {/* <div
 				className="flex transition-transform duration-700 ease-in-out w-[263px] h-full"
 				style={{ transform: `translateX(-${currentIndex * 100}%)` }}
 			>
@@ -82,6 +106,6 @@ export const CarouselProjects = () => {
 					></button>
 				))}
 			</div> */}
-		</div>
-	);
-}
+        </div>
+    );
+};
