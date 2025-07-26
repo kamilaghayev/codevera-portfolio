@@ -2,7 +2,9 @@ import React from 'react'
 import Link from 'next/link'
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedin, FaGithub } from "react-icons/fa6";
 
+
 export const Footer = () => {
+    
     const sections = [
         { link: '#home', name: 'Home' },
         { link: '#about', name: 'About' },
@@ -20,6 +22,7 @@ export const Footer = () => {
             <Link key={index} href={section.link} className='text-sm sm:text-base lg:text-lg hover:text-[#141414] cursor-pointer'>{section.name}</Link>
         ))}
       </ul>
+        
       {/* <div className='flex gap-10 text-2xl'>
         <FaFacebookF className='hover:text-[#141414] cursor-pointer'/>
         <FaInstagram className='hover:text-[#141414] cursor-pointer'/>
