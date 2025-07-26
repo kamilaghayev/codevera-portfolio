@@ -29,7 +29,7 @@ export const Footer = () => {
         <FaGithub className='hover:text-[#141414] cursor-pointer'/>
         <FaYoutube className='hover:text-[#141414] cursor-pointer'/>
       </div> */}
-      <span className='text-sm sm:text-base lg:text-lg'>© 2025 CodeVera, Inc. All rights reserved.</span>
+      <span className='text-sm sm:text-base lg:text-lg'>© 2022-2025 CodeVera, Inc. All rights reserved.</span>
     </div>
   )
 }
