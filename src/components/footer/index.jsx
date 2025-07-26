@@ -2,9 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedin, FaGithub } from "react-icons/fa6";
 
-
 export const Footer = () => {
-
     const sections = [
         { link: '#home', name: 'Home' },
         { link: '#about', name: 'About' },
